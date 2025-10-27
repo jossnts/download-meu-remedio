@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MeuRemédio - Seu Despertador de Remédios Acessível</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define a fonte padrão como Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Estilo para o container do vídeo de fundo */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: blur(8px); /* MANTÉM o desfoque no vídeo */
+            -webkit-filter: blur(8px);
+            opacity: 0.8;
+        }
+
+        /* * MUDANÇA PRINCIPAL:
+         * Removemos o fundo da caixa de conteúdo.
+         * Adicionamos sombra ao texto para garantir a legibilidade.
+        */
+        .hero-text-shadow h1, 
+        .hero-text-shadow p {
+            /* Sombra de texto para destacar o texto do fundo */
+            text-shadow: 0 0px 15px rgba(0, 0, 0, 0.4); 
+        }
+
+        .hero-text-shadow .highlight {
+            color:#93c5fd; /* Cor azul clara (blue-300) */
+            /* Sombra um pouco mais suave para a cor clara */
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white leading-relaxed">
+
+    <header class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-center md:justify-start">
+                <a href="#" class="text-2xl font-bold text-white">Meu Remédio - Seu Despertador de Remédios</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- 
+          SEÇÃO HERO ATUALIZADA
+          - O 'div' interno agora tem a classe 'hero-text-shadow'
+          - Removemos o fundo da caixa de conteúdo
+        -->
+        <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 text-center px-6 overflow-hidden">
+            
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/Gravação de Tela 2025-10-27 162523.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+
+            <!-- 
+              MUDANÇA: A classe 'hero-content' foi trocada por 'hero-text-shadow'
+              Isso aplica a sombra de texto que definimos no CSS.
+            -->
+            <div class="max-w-3xl hero-text-shadow">
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">
+                    O <span class="highlight">despertador</span> de remédios feito para todos.
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+                    Nunca mais se esqueça de um remédio. Nosso app usa inteligência artificial para guiar você por voz, de forma simples e acessível.
+                </p>
+                
+                <a href="https://www.mediafire.com/file/1v5vw2w2uaztz2q/app-release.apk/file" 
+                   class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">
+                    Baixar o APK Agora
+                </a>
+                <p class="text-sm text-gray-200 mt-3">Download seguro e direto.</p>
+            </div>
+        </section>
+
+        <!-- O restante do site permanece igual -->
+        <section id="features" class="py-20 bg-gray-800 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-center mb-12">
+                    Desenvolvido para Acessibilidade Real
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Comandos de Voz por IA</h3>
+                        <p class="text-gray-300">
+                            Configure, adie e confirme seus alarmes usando apenas a voz. A IA entende linguagem natural, facilitando para quem não pode ler.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Alto Contraste e Leitura de Tela</h3>
+                        <p class="text-gray-300">
+                            Interface com cores de alto contraste e botões grandes. Totalmente compatível com leitores de tela (TalkBack) para navegação tátil.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-xl">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Simples e Intuitivo</h3>
+                        <p class="text-gray-300">
+                            Sem menus complicados. O fluxo do app é guiado por voz e ícones universais, ideal para idosos ou pessoas com dificuldade de leitura.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section id="preview" class="py-20 px-6">
+            <div class="container mx-auto max-w-6xl text-center">
+                 <h2 class="text-3xl font-bold text-center mb-12">
+                    Veja como é fácil de usar
+                </h2>
+                
+                <div class="bg-gray-700 mx-auto rounded-lg shadow-2xl flex items-center justify-center border-2 border-gray-600">
+                    <video src="videos/Gravação de Tela 2025-10-27 162523.mp4" poster="imagens/Logotipo farmácia ícone remédios elegante moderno azul branco.png"  controls> </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="py-20 bg-blue-600 text-center px-6">
+            <div class="container mx-auto max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4">
+                    Pronto para organizar sua rotina de remédios?
+                </h2>
+                <p class="text-lg text-blue-100 mb-8">
+                    Baixe o aplicativo gratuitamente e tenha mais independência e segurança no seu dia a dia.
+                </p>
+                
+                <a href="https://www.mediafire.com/file/1v5vw2w2uaztz2q/app-release.apk/file" 
+                   class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 inline-block">
+                    Fazer Download (APK)
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 bg-gray-900 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-500 text-sm">
+                © 2025 [Nome da Equipe do Projeto]. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
